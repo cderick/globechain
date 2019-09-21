@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+    "paths": {
+      "@images/*": ["static/*"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "__mocks__",
+    "data",
+    "dist"
+  ]
+}

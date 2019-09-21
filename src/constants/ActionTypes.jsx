@@ -1,0 +1,2 @@
+const GET_APICONTENT = 'GET_APICONTENT';
+export { GET_APICONTENT };
