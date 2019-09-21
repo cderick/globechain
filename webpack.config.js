@@ -7,7 +7,6 @@ const path = require('path');
 const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const extractGlobalCSS = new ExtractTextPlugin('css/[name]-global-styles.css');
 const extractModuleCSS = new ExtractTextPlugin('css/[name]-module-styles.css');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -146,27 +145,14 @@ if (TARGET === 'dev') {
             filename: 'index.html',
             chunks: ['index'],
             hash: true,
-        }),
-        new TerserPlugin({
-            parallel: true,
-            terserOptions: {
-              ecma: 6,
-            },
-        }),
-        new UglifyJsPlugin({
-            uglifyOptions: {
-                warnings: false,
-                output: {
-                    comments: false,
-                },
-                compress: {
-                    drop_console: true,
-                },
-            },
-        }),
+        })
     ];
     
     module.exports = merge.smart(common, {
+        optimization: {
+            minimize: true,
+            minimizer: [new TerserPlugin()],
+        },
         module: {
             rules: [
                 {
