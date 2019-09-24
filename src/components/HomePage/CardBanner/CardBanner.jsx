@@ -21,7 +21,7 @@ class CardBanner extends React.Component {
 									<img src="https://www.catster.com/wp-content/uploads/2018/05/A-gray-cat-crying-looking-upset.jpg" className="card-img-top" alt="catPlaceholder" />
 									<div className="card-body">
 										<h5 className="card-title">{cv.value}</h5>
-										<p className="card-text">Some quick example text to build on the globechain approach.</p>
+										<p className="card-text">Some text to build on the globechain approach.</p>
 										<a href={`https://www.globechain.com/search.html?searchSectionID=${cv.sectionID}`} target="_blank" className="btn btn-primary">Check this now</a>
 									</div>
 								</div>

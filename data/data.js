@@ -26,7 +26,7 @@ const data = {
     },
     heroBanner: {
         heroMessage: {
-            title: 'Think sustainbility. Think reuse.'
+            title: 'Think Retail. Think reuse.'
         },
         heroForms: [{
             label: 'What are you looking for?',
